@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoRent</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c3aed'/%3E%3Cpath d='M7 19l2-5a2 2 0 0 1 2-1.3h10a2 2 0 0 1 2 1.3l2 5v4h-2v-1.5H9V23H7z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <section id="tela-login" class="login-tela" hidden>
+    <div class="login-lado">
+      <div class="logo" id="logo-lado"></div>
+      <div>
+        <h1>Gestão de locação de veículos, do jeito certo.</h1>
+        <p>Frota, clientes, reservas, locações e pagamentos em um só lugar.</p>
+      </div>
+      <small style="color:rgba(255,255,255,.5)">Projeto acadêmico A3 – Modelagem de Software</small>
+    </div>
+    <div class="login-form-area">
+      <div class="login-form">
+        <div id="entrar-bloco" style="display:grid;gap:16px">
+          <h1>Entrar</h1>
+          <form id="form-login" novalidate style="display:grid;gap:16px">
+            <label class="campo"><span>E-mail<b class="obrigatorio">*</b></span><input name="email" type="email" autocomplete="username" placeholder="voce@exemplo.com"></label>
+            <label class="campo"><span>Senha<b class="obrigatorio">*</b></span><input name="senha" type="password" autocomplete="current-password"></label>
+            <div id="erro-login" class="aviso ruim" hidden role="alert"></div>
+            <button class="btn btn-primario" type="submit">Entrar</button>
+          </form>
+          <p class="suave">É cliente e ainda não tem conta? <a href="#" id="ir-cadastro">Cadastre-se</a></p>
+        </div>
+        <div id="cadastro-bloco" style="display:grid;gap:16px" hidden>
+          <h1>Criar conta de cliente</h1>
+          <form id="form-cadastro" novalidate class="form-grade"></form>
+          <p class="suave">Já tem conta? <a href="#" id="ir-login">Entrar</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="tela-app" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

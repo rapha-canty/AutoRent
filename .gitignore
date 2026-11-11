@@ -1,0 +1,29 @@
+# Maven / Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
